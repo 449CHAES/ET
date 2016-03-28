@@ -1,0 +1,127 @@
+********************************************************************************
+***                            MC-9 GUAP Edition                             ***
+***                                                                          ***
+***                                                                          ***
+***      Анализ переходных процессов Transient analysis of circuit9(15)      ***
+********************************************************************************
+Limits
+======
+Time Range           3m
+Maximum Time Step    3e-07
+Number of Points     51
+Temperature          Linear 27
+Run Options          Normal
+State Variables      Zero
+Operating Point      On
+Operating Point Only Off
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27 
+
+Model parameters for devices of type Diode
+==========================================
+Instance:              D1   
+Using model:        1N746   
+LEVEL                   1(*)
+AF                 1.000 (*)
+BV                 3.300    
+CJO              304.407p   
+EG                 1.110 (*)
+FC               500.000m(*)
+IBV               20.000m   
+IBVL               0.000 (*)
+IKF                0.000 (*)
+IS                 5.724f   
+ISR                0.000 (*)
+KF                 0.000 (*)
+M                495.751m   
+N                  1.000 (*)
+NBV                1.000 (*)
+NBVL               1.000 (*)
+NR                 2.000 (*)
+RL                 1.000G   
+RS                28.000    
+T_ABS           UNDEFINED(*)
+T_MEASURED      UNDEFINED(*)
+T_REL_GLOBAL    UNDEFINED(*)
+T_REL_LOCAL     UNDEFINED(*)
+TBV1               0.000 (*)
+TBV2               0.000 (*)
+TIKF               0.000 (*)
+TRS1               0.000 (*)
+TRS2               0.000 (*)
+TT                 0.000 (*)
+VJ               749.998m   
+XTI                3.000 (*)
+(*) Default Parameter
+
+
+
+Model parameters for devices of type Sine Source
+================================================
+Instance:               U   
+Using model:      GENERAL   
+A                 20.000    
+DC                 0.000 (*)
+F                500.000    
+PH                 0.000 (*)
+RP                 0.000 (*)
+RS                 0.000    
+TAU                0.000 (*)
+(*) Default Parameter
+
+
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage 
+1             0.000   OUT      -8.051E-030 
+
+
+Operating point for devices of type Diode
+=========================================
+Instance:                 D1
+Using model:           1N746
+ID                4.546E-025
+VD                8.051E-030
+REQ               998.780MEG
+CAP                 304.407p
+
+DC Power Terms:
+PD                2.064E-040
+PS                    0.000 
+
+DC Pin Currents:
+Id                4.546E-025
+
+Condition:
+State                    OFF
+
+
+
+Operating point for devices of type Resistor
+============================================
+Instance:                  R1              R2
+DC Power Terms:
+PD                 6.482E-061      3.241E-062
+
+DC Pin Currents:
+Ir                 8.051E-032      4.026E-033
+
+
+
+Operating point for devices of type Sine Source
+===============================================
+Instance:                   U
+Using model:          GENERAL
+DC Power Terms:
+PG                     0.000 
+
+DC Pin Currents:
+ISource           -8.051E-032
+
+

@@ -1,0 +1,127 @@
+********************************************************************************
+***                            MC-9 GUAP Edition                             ***
+***                                                                          ***
+***                                                                          ***
+***      Анализ переходных процессов Transient analysis of circuit7(12)      ***
+********************************************************************************
+Limits
+======
+Time Range           3m
+Maximum Time Step    1e-07
+Number of Points     51
+Temperature          Linear 27
+Run Options          Normal
+State Variables      Zero
+Operating Point      On
+Operating Point Only Off
+
+
+*****************************************************
+***                Temperature=27                 ***
+*****************************************************
+
+Temperature=27 
+
+Model parameters for devices of type Diode
+==========================================
+Instance:            X1.D1            X1.D2            X1.D3            X1.D4   
+Using model:    X1.D2SB60A       X1.D2SB60A       X1.D2SB60A       X1.D2SB60A   
+LEVEL                    1(*)             1(*)             1(*)             1(*)
+AF                  1.000 (*)        1.000 (*)        1.000 (*)        1.000 (*)
+BV                600.000          600.000          600.000          600.000    
+CJO                79.200p          79.200p          79.200p          79.200p   
+EG                  1.110 (*)        1.110 (*)        1.110 (*)        1.110 (*)
+FC                500.000m(*)      500.000m(*)      500.000m(*)      500.000m(*)
+IBV                10.000u          10.000u          10.000u          10.000u   
+IBVL                0.000 (*)        0.000 (*)        0.000 (*)        0.000 (*)
+IKF                 1.740            1.740            1.740            1.740    
+IS                939.000p         939.000p         939.000p         939.000p   
+ISR                 0.000 (*)        0.000 (*)        0.000 (*)        0.000 (*)
+KF                  0.000 (*)        0.000 (*)        0.000 (*)        0.000 (*)
+M                 323.100m         323.100m         323.100m         323.100m   
+N                   1.600            1.600            1.600            1.600    
+NBV                 1.000 (*)        1.000 (*)        1.000 (*)        1.000 (*)
+NBVL                1.000 (*)        1.000 (*)        1.000 (*)        1.000 (*)
+NR                  2.000 (*)        2.000 (*)        2.000 (*)        2.000 (*)
+RL                  0.000 (*)        0.000 (*)        0.000 (*)        0.000 (*)
+RS                 11.900m          11.900m          11.900m          11.900m   
+T_ABS            UNDEFINED(*)     UNDEFINED(*)     UNDEFINED(*)     UNDEFINED(*)
+T_MEASURED       UNDEFINED(*)     UNDEFINED(*)     UNDEFINED(*)     UNDEFINED(*)
+T_REL_GLOBAL     UNDEFINED(*)     UNDEFINED(*)     UNDEFINED(*)     UNDEFINED(*)
+T_REL_LOCAL      UNDEFINED(*)     UNDEFINED(*)     UNDEFINED(*)     UNDEFINED(*)
+TBV1                0.000 (*)        0.000 (*)        0.000 (*)        0.000 (*)
+TBV2                0.000 (*)        0.000 (*)        0.000 (*)        0.000 (*)
+TIKF                0.000 (*)        0.000 (*)        0.000 (*)        0.000 (*)
+TRS1                0.000 (*)        0.000 (*)        0.000 (*)        0.000 (*)
+TRS2                0.000 (*)        0.000 (*)        0.000 (*)        0.000 (*)
+TT                  9.200u           9.200u           9.200u           9.200u   
+VJ                525.000m         525.000m         525.000m         525.000m   
+XTI                 3.000 (*)        3.000 (*)        3.000 (*)        3.000 (*)
+(*) Default Parameter
+
+
+
+Model parameters for devices of type Sine Source
+================================================
+Instance:                U   
+Using model:       GENERAL   
+A                  15.000    
+DC                  0.000 (*)
+F                   1.000K   
+PH                  0.000 (*)
+RP                  0.000 (*)
+RS                  1.000m(*)
+TAU                 0.000 (*)
+(*) Default Parameter
+
+
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+1            -0.002f  2            -0.002f  OUT      -9.679E-023 
+
+
+Operating point for devices of type Diode
+=========================================
+Instance:               X1.D1            X1.D2            X1.D3            X1.D4
+Using model:       X1.D2SB60A       X1.D2SB60A       X1.D2SB60A       X1.D2SB60A
+ID                 8.288E-021       1.142E-020       8.288E-021       1.142E-020
+VD                    -0.002f           0.002f          -0.002f           0.002f
+REQ                 44.069MEG        44.069MEG        44.069MEG        44.069MEG
+CAP                   79.409p          79.409p          79.409p          79.409p
+
+DC Power Terms:
+PD                 3.027E-033       5.747E-033       3.027E-033       5.747E-033
+PS                     0.000            0.000            0.000            0.000 
+
+DC Pin Currents:
+Id                 8.288E-021       1.142E-020       8.288E-021       1.142E-020
+
+Condition:
+State                     OFF              OFF              OFF              OFF
+
+
+
+Operating point for devices of type Resistor
+============================================
+Instance:                 RS_U               R1
+DC Power Terms:
+PD                  1.484E-064       9.368E-048
+
+DC Pin Currents:
+Ir                 -3.852E-031       9.679E-026
+
+
+
+Operating point for devices of type Sine Source
+===============================================
+Instance:                    U
+Using model:           GENERAL
+DC Power Terms:
+PG                      0.000 
+
+DC Pin Currents:
+ISource            -1.179E-031
+
+
