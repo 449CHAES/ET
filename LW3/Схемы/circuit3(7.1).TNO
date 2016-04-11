@@ -78,25 +78,25 @@ TAU                0.000 (*)
 
 DC Operating Point Voltages
 ===========================
-Node         Voltage  Node         Voltage  Node         Voltage 
-1             0.000   OUT         857.619n  3             5.000  
+Node         Voltage  Node         Voltage 
+1             0.000   OUT       2.576E-022 
 
 
 Operating point for devices of type Diode
 =========================================
 Instance:                 D1
 Using model:        $GENERIC
-ID                   -9.005n
-VD                   -5.000 
-REQ                   4.975G
-CAP                   2.027p
+ID                    0.001f
+VD               -2.576E-022
+REQ                 6.458MEG
+CAP                   2.500p
 
 DC Power Terms:
-PD                   45.025n
+PD                1.147E-029
 PS                    0.000 
 
 DC Pin Currents:
-Id                   -9.005n
+Id                    0.001f
 
 Condition:
 State                    OFF
@@ -105,12 +105,12 @@ State                    OFF
 
 Operating point for devices of type Resistor
 ============================================
-Instance:                  R2              R3
+Instance:                  R3
 DC Power Terms:
-PD                     7.355f          0.368f
+PD                 3.319E-047
 
 DC Pin Currents:
-Ir                     8.576n       -428.810p
+Ir                -1.288E-025
 
 
 
@@ -122,17 +122,6 @@ DC Power Terms:
 PG                     0.000 
 
 DC Pin Currents:
-ISource                8.576n
-
-
-
-Operating point for devices of type SPICE Source
-================================================
-Instance:                  E
-DC Power Terms:
-PG                   45.025n
-
-DC Pin Currents:
-ISource              -9.005n
+ISource           -1.288E-025
 
 
