@@ -2,20 +2,20 @@
 ***                            MC-9 GUAP Edition                             ***
 ***                                                                          ***
 ***                                                                          ***
-***          Анализ по постоянному току DC Analysis of circuit1(1)           ***
+***               Частотный анализ AC Analysis of circuit3(4)                ***
 ********************************************************************************
 Limits
 ======
-Variable 1 Method Auto
-Variable 1 Name   V1
-Variable 1 Range  10,0,.5
-Variable 2 Method None
-Variable 2 Name   
-Variable 2 Range  
-Temperature       Linear 27
-Number of Points  51
-Maximum Change %  5
-Run Options       Normal
+Frequency Range  1E8,1
+Number of Points 51
+Temperature      Linear 27
+Maximum Change % 5
+Noise Input      NONE
+Noise Output     2
+Run Options      Normal
+State Variables  Zero
+Frequency Step   Auto
+Operating Point  On
 
 
 *****************************************************
@@ -45,7 +45,7 @@ Instance:              Q1
 Using model:       2N706A   
 LEVEL                   1(*)
 AF                 1.000 (*)
-BF                47.924    
+BF                50.000    
 BR                 1.000m   
 CJC               27.483p   
 CJE                2.000p   
@@ -101,5 +101,100 @@ XTF              500.010m
 XTI                3.000 (*)
 (*) Default Parameter
 
+
+
+DC Operating Point Voltages
+===========================
+Node         Voltage  Node         Voltage  Node         Voltage 
+1             5.759   2             6.292   3             5.388  
+4            10.000   5             6.500   OUT           0.000  
+
+
+Operating point for devices of type Bipolar Junction Transistors NPN
+====================================================================
+Instance:                 Q1
+Using model:          2N706A
+IB                    9.929m
+IC                  848.156u
+VBE                 903.857m
+VBC                 533.004m
+VCE                 370.853m
+BETADC               85.426m
+GM                  325.109m
+RPI                 132.585 
+RX                    0.000 
+RO                    1.179K
+CPI                 283.778p
+CMU                  38.201n
+CBX                   0.000 
+CJS                   0.000 
+BETAAC               43.105 
+FT                  1.345MEG
+
+DC Power Terms:
+PD                    9.289m
+PS                    0.000 
+
+DC Pin Currents:
+Ib                    9.929m
+Ic                  848.156u
+Ie                  -10.777m
+Is                    0.000 
+
+Condition:
+State                    LIN
+
+
+
+Operating point for devices of type Resistor
+============================================
+Instance:                  R1              R2              R3              R4
+DC Power Terms:
+PD                     3.597m         58.069m          2.158m          0.000 
+
+DC Pin Currents:
+Ir                  -848.155u        -10.777m         10.389m          0.000 
+
+
+Instance:                  R5              R6
+DC Power Terms:
+PD                    89.270u          3.046m
+
+DC Pin Currents:
+Ir                   -24.076u       -484.018u
+
+
+
+Operating point for devices of type Capacitor
+=============================================
+Instance:                  C1
+DC Power Terms:
+PS                     0.000 
+
+DC Pin Currents:
+Ic                     0.000 
+
+
+
+Operating point for devices of type Sine Source
+===============================================
+Instance:                  V1
+Using model:          GENERAL
+DC Power Terms:
+PG                    67.525m
+
+DC Pin Currents:
+ISource              -10.389m
+
+
+
+Operating point for devices of type SPICE Source
+================================================
+Instance:                 V2
+DC Power Terms:
+PG                    8.722m
+
+DC Pin Currents:
+ISource            -872.231u
 
 

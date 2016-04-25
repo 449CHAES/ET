@@ -2,11 +2,11 @@
 FileType=CIR
 Version=9.00
 Program=Micro-Cap
-Screen=1680,1050
-MCAPVersion=9.0.7.0
-Key ID=1 423 547 585
-NLCnt=13
-TXCnt=0
+Screen=1920,1080
+MCAPVersion=9.0.3.0
+Key ID=2 233 293 684
+NLCnt=21
+TXCnt=1
 
 [shapedef]
 Name=Battery
@@ -41,6 +41,14 @@ PolyLine=36,0
 PolyLine=48,0
 PolyLine=48,0
 Current=32,8,16,8
+
+[shapedef]
+Name=Capacitor
+Line=0,0,22,0
+Line=22,-8,22,8
+Line=26,-8,26,8
+Line=26,0,48,0
+Current=32,12,16,12
 
 [shapedef]
 Name=NPN
@@ -103,7 +111,7 @@ Pin="Emitter",3,3,5,1
 Name=Resistor
 Definition=Resistor
 Shape=Resistor
-Mask=6913
+Mask=7937
 memo=Resistor
 Label Offset=18,6,8,11
 PinCnt=2
@@ -114,7 +122,7 @@ Pin="Minus",0,0,-14,-4
 Name=Sine Source
 Definition=Sine source
 Shape=Sine_Source
-Mask=5121
+Mask=4865
 memo=Sine Source
 Label Offset=18,12,15,12
 PinCnt=2
@@ -125,7 +133,7 @@ Pin="Minus",0,0,-19,-6
 Name=Battery
 Definition=Battery
 Shape=Battery
-Mask=5633
+Mask=4865
 memo=Battery
 Label Offset=19,7,10,13
 PinCnt=2
@@ -136,36 +144,47 @@ Pin="Minus",0,0,-10,-5
 Name=Ground
 Definition=Ground
 Shape=Ground
-Mask=257
+Mask=769
 memo=Ground
 Label Offset=0,0,0,0
 PinCnt=1
 Pin="PinA",0,0,-3,-7
 
+[compdef]
+Name=Capacitor
+Definition=Capacitor
+Shape=Capacitor
+Mask=7169
+memo=Capacitor
+Label Offset=16,12,12,12
+PinCnt=2
+Pin="Plus",6,0,-3,-5
+Pin="Minus",0,0,-14,-5
+
 [Circuit]
-Window Placement=2,3, -1,-1, -4,-23, 0,0,1045,626
+Window Placement=2,3, -1,-1, -9,-38, 128,128,1458,721
 Default Object=Color=#000080
-Default Object Font=Height=-15,FStyle=0,Color=#000080,Name=Arial
+Default Object Font=Height=-23,FStyle=0,Color=#000080,Name=Arial
 Default Object Apply Border To Text=No
 Default Object Apply Fill To Text=No
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Select Box Color=#000080
-Grid Text Color=Height=-12,FStyle=0,Color=#0000FF,Name=Verdana
+Grid Text Color=Height=-20,FStyle=0,Color=#0000FF,Name=Verdana
 Component Color=#0000FF
-Attribute Text=Height=-12,FStyle=0,Color=#008000,Name=Verdana
+Attribute Text=Height=-20,FStyle=0,Color=#008000,Name=Verdana
 Wire Color=#008000
 Bus Color=#008000
-Pin Connection=Height=-10,FStyle=0,Color=#FF0000,Name=Arial
-Node Number=Height=-11,FStyle=0,Color=#FF00FF,Name=Arial
+Pin Connection=Height=-15,FStyle=0,Color=#FF0000,Name=Arial
+Node Number=Height=-17,FStyle=0,Color=#FF00FF,Name=Arial
 Node Voltage Color=#000000
 Dynamic AC Voltage Color=#E4E4E4
-Text Banner Text=Height=-15,FStyle=0,Color=#800000,Name=Arial
+Text Banner Text=Height=-23,FStyle=0,Color=#800000,Name=Arial
 Title Block Background=#C0C0C0
-Current=Height=-11,FStyle=0,Color=#0000FF,Name=Arial
-Power/Condition=Height=-11,FStyle=0,Color=#FF0000,Name=Arial
+Current=Height=-17,FStyle=0,Color=#0000FF,Name=Arial
+Power/Condition=Height=-17,FStyle=0,Color=#FF0000,Name=Arial
 Digital Path Color=#FF0000
-Title Block=Height=-15,FStyle=0,Color=#000000,Name=Arial
+Title Block=Height=-23,FStyle=0,Color=#000000,Name=Arial
 Disabled	Color=#C0C0C0
 KeyWord Color=#0000FF
 Error	Color=#FF0000
@@ -175,9 +194,9 @@ Digital F Color=#FFFF00
 Digital 1 Color=#FF0000
 Digital X Color=#C0C0C0
 Digital Z Color=#808080
-Window Placement in Transient Analysis=0,1, -1,-1, -4,-23, 0,0,835,672
-Window Placement in AC Analysis=2,3, -1,-1, -4,-23, 198,198,1583,809
-Window Placement in DC Analysis=2,3, -1,-1, -4,-23, 88,88,1473,699
+Window Placement in Transient Analysis=2,3, -1,-1, -9,-38, 160,160,1783,753
+Window Placement in AC Analysis=2,3, -1,-1, -9,-38, 288,288,1911,881
+Window Placement in DC Analysis=2,3, -1,-1, -9,-38, 224,224,1847,817
 SpiceType=AMBIGUOUS
 Block Select Color=#51F998
 TitleBlock Field_1=$name
@@ -188,7 +207,7 @@ TitleBlock Field_5=Page $page of $maxpage
 TitleBlock One Title=False
 Title_Block_Border=False
 Title_Block=False
-Show Nodes=True
+Show Nodes=False
 Show Voltages=False
 Show Current=False
 Show Power=False
@@ -200,137 +219,316 @@ Show Grid Text=True
 
 [Comp]
 Name=NPN
-Grid=52,41
+Grid=54,38
 
 [Attr]
 ONV=28,-13,PART,Q1
 Style=8192
+Height=-12
+
+[Attr]
+ONV=0,14,VALUE,
+Height=-12
 
 [Attr]
 ONV=28,1,MODEL,2N706A
+Height=-12
+
+[Attr]
+ONV=0,42,COST,
+Height=-12
+
+[Attr]
+ONV=0,56,POWER,
+Height=-12
 
 [Attr]
 ONV=28,29,PACKAGE,TO-18
+Height=-12
 
 [Comp]
 Name=Resistor
-Grid=55,32
+Grid=57,29
 Rot=1
 
 [Attr]
-ONV=-22,21,PART,R1
+ONV=7,22,PART,R1
 Style=8192
+Height=-12
 
 [Attr]
-ONV=-20,34,RESISTANCE,5k
+ONV=8,35,RESISTANCE,5k
 Style=8192
+Height=-12
 
 [Attr]
-ONV=0,0,PACKAGE,
+ONV=0,28,FREQ,
+Height=-12
+
+[Attr]
+ONV=0,42,MODEL,
+Height=-12
+
+[Attr]
+ONV=0,56,COST,
+Height=-12
+
+[Attr]
+ONV=0,70,POWER,
+Height=-12
 
 [Comp]
 Name=Resistor
-Grid=55,44
+Grid=57,41
 Rot=1
 
 [Attr]
 ONV=8,11,PART,R2
 Style=8192
+Height=-12
 
 [Attr]
-ONV=0,0,RESISTANCE,0.5k
+ONV=9,24,RESISTANCE,0.5k
 Style=8192
+Height=-12
 
 [Attr]
-ONV=0,0,PACKAGE,
+ONV=0,28,FREQ,
+Height=-12
+
+[Attr]
+ONV=0,42,MODEL,
+Height=-12
+
+[Attr]
+ONV=0,56,COST,
+Height=-12
+
+[Attr]
+ONV=0,70,POWER,
+Height=-12
 
 [Comp]
 Name=Resistor
-Grid=52,41
+Grid=54,38
 Rot=2
 
 [Attr]
 ONV=-34,-20,PART,R3
 Style=8192
+Height=-12
 
 [Attr]
 ONV=-32,-33,RESISTANCE,20
 Style=8192
+Height=-12
 
 [Attr]
-ONV=0,0,PACKAGE,
+ONV=0,28,FREQ,
+Height=-12
+
+[Attr]
+ONV=0,42,MODEL,
+Height=-12
+
+[Attr]
+ONV=0,56,COST,
+Height=-12
+
+[Attr]
+ONV=0,70,POWER,
+Height=-12
 
 [Comp]
 Name=Sine Source
-Grid=40,41
+Grid=42,38
 Rot=4
 
 [Attr]
 ONV=18,-26,PART,V1
 Style=8192
+Height=-12
 
 [Attr]
 ONV=18,-40,MODEL,GENERAL
+Height=-12
 
 [Attr]
-ONV=0,0,PACKAGE,
+ONV=0,28,COST,
+Height=-12
+
+[Attr]
+ONV=0,42,POWER,
+Height=-12
 
 [Comp]
 Name=Battery
-Grid=61,32
+Grid=63,29
 Rot=6
 
 [Attr]
 ONV=-35,7,PART,V2
 Style=8192
+Height=-12
 
 [Attr]
 ONV=0,0,VALUE,10
+Height=-12
 
 [Attr]
-ONV=0,0,PACKAGE,
+ONV=0,28,COST,
+Height=-12
+
+[Attr]
+ONV=0,42,POWER,
+Height=-12
 
 [Comp]
 Name=Ground
-Grid=61,32
+Grid=63,29
 
 [Comp]
 Name=Ground
-Grid=55,50
+Grid=57,47
 Rot=1
 
 [Wire]
-Grids=40,50,55,50
+Grids=42,47,54,47
 
 [Wire]
-Grids=40,41,40,50
+Grids=42,38,42,47
 
 [Comp]
 Name=Resistor
-Grid=62,44
+Grid=64,41
 Rot=1
 
 [Attr]
 ONV=8,11,PART,R4
 Style=8192
+Height=-12
 
 [Attr]
 ONV=9,27,RESISTANCE,25
 Style=8192
+Height=-12
 
 [Attr]
-ONV=0,0,PACKAGE,
+ONV=0,28,FREQ,
+Height=-12
+
+[Attr]
+ONV=0,42,MODEL,
+Height=-12
+
+[Attr]
+ONV=0,56,COST,
+Height=-12
+
+[Attr]
+ONV=0,70,POWER,
+Height=-12
 
 [Wire]
-Grids=55,50,62,50
+Grids=57,47,64,47
+
+[Comp]
+Name=Resistor
+Grid=54,29
+Rot=1
+
+[Attr]
+ONV=-22,21,PART,R5
+Style=8192
+Height=-12
+
+[Attr]
+ONV=-22,8,RESISTANCE,154k
+Style=8192
+Height=-12
+
+[Attr]
+ONV=0,28,FREQ,
+Height=-12
+
+[Attr]
+ONV=0,42,MODEL,
+Height=-12
+
+[Attr]
+ONV=0,56,COST,
+Height=-12
+
+[Attr]
+ONV=0,70,POWER,
+Height=-12
+
+[Comp]
+Name=Resistor
+Grid=54,41
+Rot=1
+
+[Attr]
+ONV=-22,21,PART,R6
+Style=8192
+Height=-12
+
+[Attr]
+ONV=-27,32,RESISTANCE,13k
+Style=8192
+Height=-12
+
+[Attr]
+ONV=0,28,FREQ,
+Height=-12
+
+[Attr]
+ONV=0,42,MODEL,
+Height=-12
+
+[Attr]
+ONV=0,56,COST,
+Height=-12
+
+[Attr]
+ONV=0,70,POWER,
+Height=-12
 
 [Wire]
-Grids=55,44,62,44
+Grids=54,47,57,47
 
-[Node Offsets]
-Section=0
-;Node,Page,GridX,GridY,OffsetX,OffsetY
-Offset=4,0,55,32,0,-1
+[Wire]
+Grids=54,35,54,38
+
+[Wire]
+Grids=54,38,54,41
+
+[Wire]
+Grids=54,29,57,29
+
+[Comp]
+Name=Capacitor
+Grid=58,41
+Rot=4
+
+[Attr]
+ONV=35,-48,PART,C1
+Style=8192
+
+[Attr]
+ONV=12,-31,CAPACITANCE,0.209u
+Style=8192
+
+[Wire]
+Grids=58,41,59,41
+
+[Wire]
+Grids=57,41,58,41
+
+[Grid Text]
+Text="Out"
+Grid=64,41
+CBorder=NONE
 
 [Schematic]
 CurrentSection 0=0
@@ -343,7 +541,7 @@ TextQuad=4099
 Scale=0.5
 PrinterScale=1
 GridUser=10
-ShapeGroups="Main","Euro","DeMorgan","Polarity","Electrolytic","GroundArrow"
+ShapeGroups="Main","Euro","DeMorgan","Electrolytic","Polarity"
 CalcRMS=False
 CalcAVG=False
 CalcPeak=False
@@ -419,17 +617,17 @@ FONT=Yes
 
 [Section]
 Index=0
-Name="circuit1(1)"
+Name="circuit3(4)"
 Type=Main
 Enable=True
 CurrentPage 0=0
 CurrentPage 1=0
 CurrentPage 2=0
 CurrentPage 3=0
-TabSize 0=400
-TabSize 1=400
-TabSize 2=400
-TabSize 3=400
+TabSize 0=525
+TabSize 1=525
+TabSize 2=525
+TabSize 3=525
 
 [Page]
 Index=0
@@ -440,9 +638,9 @@ Name=Main
 Scale 0=1
 Scale 1=1
 Scale 2=1
-SB 3=136,192
+SB 3=42,106
 Scale 3=0.5
-Grid=55,35
+Grid=72,51
 
 [Page]
 Index=1
@@ -472,7 +670,7 @@ Name=Info
 [Text Area]
 Section=0
 Page=1
-Font=Height=-15,FStyle=0,Color=#000000,Name=Courier New
+Font=Height=-23,FStyle=0,Color=#000000,Name=Courier New
 Comment Color=#008000
 Background Color=#FFFFFF
 Len=0
@@ -481,17 +679,23 @@ Len=0
 [Text Area]
 Section=0
 Page=2
-Font=Height=-15,FStyle=0,Color=#000000,Name=Courier New
+Font=Height=-23,FStyle=0,Color=#000000,Name=Courier New
 Comment Color=#008000
 Background Color=#FFFFFF
-Len=144
-*** From file C:\Program Files\Spectrum Software\MC9\library\UTILITY.LBR
+Len=434
+*** From file H:\mc9g\library\UTILITY.LBR
 *** 10MHz Sinusoidal Source
 .MODEL GENERAL SIN (A=2 DC=6.5 F=1k RS=0)
+*** From file H:\mc9g\library\MSBJT.LBR
+*** NPN Switching transistors
+.MODEL 2N706A NPN (BF=50 BR=1m CJC=27.4829p CJE=2p IKF=752.796m IKR=10m
++ IS=10.1652f ISC=100p ISE=977.355f ITF=10.0415m MJC=558.067m MJE=500m
++ NE=1.94587 NF=1.23211 RC=2 RE=1.99985 TF=671.676p TR=102.03u VAF=100 VJC=700m
++ VTF=10 XTF=500.01m)
 
 [Transient]
-Window Placement=0,1, -1,-1, -4,-23, 832,0,1667,893
-Font=Height=-15,FStyle=0,Color=#0000FF,Name=Arial
+Window Placement=2,3, -1,-1, -9,-38, 160,160,1783,753
+Font=Height=-23,FStyle=0,Color=#0000FF,Name=Arial
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Select Box Color=#000080
@@ -500,7 +704,7 @@ AutoTitle=Yes
 Grid Color=#808080
 Grid Weight=1
 Grid Pattern=Dot6
-Tracker Foreground=Height=-15,FStyle=0,Color=#000000,Name=Arial
+Tracker Foreground=Height=-23,FStyle=0,Color=#000000,Name=Arial
 Tracker Background=#FFFF00
 Baseline color=#0000FF
 Static Grids=False
@@ -531,7 +735,7 @@ Number of Grids X=5
 Number of Grids Y=5
 Cursor Select Color Primary=#C0C0C0
 Cursor Select Color Secondary=#FF0000
-Data Point Labels Color Fore=Height=-15,FStyle=0,Color=#000000,Name=Arial
+Data Point Labels Color Fore=Height=-23,FStyle=0,Color=#000000,Name=Arial
 Data Point Labels Color Back=#FFFF00
 FFT_NPts="1024"
 FFT_IncludeDCHarmonic=False
@@ -539,12 +743,12 @@ FFT_AutoScale_Harmonics="10"
 PrinterAutoTile=No
 PrinterBlackBorder=No
 MonMaxShow=3
-MonPageWidth=66
-MonPlotWidth=21
-MonExprXWidth=142
-MonExprYWidth=260
-MonRangeXWidth=90
-MonRangeYWidth=90
+MonPageWidth=81
+MonPlotWidth=25
+MonExprXWidth=159
+MonExprYWidth=289
+MonRangeXWidth=111
+MonRangeYWidth=111
 AnimateWait=0
 AnimateWaitTime=500
 Save_For_Future=No
@@ -566,7 +770,7 @@ Num Out Write Values=True
 Num Out Write Waveform Header=True
 Num Out Low="TMIN"
 Num Out High="TMAX"
-Num Out Font=Height=-15,FStyle=0,Color=#000000,Name=Courier New
+Num Out Font=Height=-23,FStyle=0,Color=#000000,Name=Courier New
 
 [Tools]
 Pos=Top
@@ -627,7 +831,7 @@ ENXSCALE=Yes
 ENYSCALE=Yes
 ZOOMIN=Yes
 ZOOMOUT=Yes
-AUTOSCALE=Yes
+AUTOSCALE=No
 COLOR=Yes
 FONT=Yes
 SELNEXT=No
@@ -637,8 +841,8 @@ Analysis=Transient
 Name="Main"
 
 [AC]
-Window Placement=2,3, -1,-1, -4,-23, 198,198,1583,809
-Font=Height=-15,FStyle=0,Color=#0000FF,Name=Arial
+Window Placement=2,3, -1,-1, -9,-38, 288,288,1911,881
+Font=Height=-23,FStyle=0,Color=#0000FF,Name=Arial
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Select Box Color=#000080
@@ -647,7 +851,7 @@ AutoTitle=Yes
 Grid Color=#808080
 Grid Weight=1
 Grid Pattern=Dot6
-Tracker Foreground=Height=-15,FStyle=0,Color=#000000,Name=Arial
+Tracker Foreground=Height=-23,FStyle=0,Color=#000000,Name=Arial
 Tracker Background=#FFFF00
 Baseline color=#0000FF
 Static Grids=False
@@ -678,7 +882,7 @@ Number of Grids X=5
 Number of Grids Y=5
 Cursor Select Color Primary=#C0C0C0
 Cursor Select Color Secondary=#FF0000
-Data Point Labels Color Fore=Height=-15,FStyle=0,Color=#000000,Name=Arial
+Data Point Labels Color Fore=Height=-23,FStyle=0,Color=#000000,Name=Arial
 Data Point Labels Color Back=#FFFF00
 FFT_NPts="1024"
 FFT_IncludeDCHarmonic=False
@@ -686,12 +890,12 @@ FFT_AutoScale_Harmonics="10"
 PrinterAutoTile=No
 PrinterBlackBorder=No
 MonMaxShow=3
-MonPageWidth=66
-MonPlotWidth=21
-MonExprXWidth=142
-MonExprYWidth=260
-MonRangeXWidth=90
-MonRangeYWidth=90
+MonPageWidth=81
+MonPlotWidth=25
+MonExprXWidth=159
+MonExprYWidth=289
+MonRangeXWidth=111
+MonRangeYWidth=111
 AnimateWait=0
 AnimateWaitTime=500
 Save_For_Future=No
@@ -714,7 +918,7 @@ Num Out Write Values=True
 Num Out Write Waveform Header=True
 Num Out Low="FMIN"
 Num Out High="FMAX"
-Num Out Font=Height=-15,FStyle=0,Color=#000000,Name=Courier New
+Num Out Font=Height=-23,FStyle=0,Color=#000000,Name=Courier New
 
 [Tools]
 Pos=Top
@@ -775,14 +979,18 @@ ENXSCALE=Yes
 ENYSCALE=Yes
 ZOOMIN=Yes
 ZOOMOUT=Yes
-AUTOSCALE=Yes
+AUTOSCALE=No
 COLOR=Yes
 FONT=Yes
 SELNEXT=No
 
+[APage]
+Analysis=AC
+Name="Main"
+
 [DC]
-Window Placement=2,3, -1,-1, -4,-23, 88,88,1473,699
-Font=Height=-15,FStyle=0,Color=#0000FF,Name=Arial
+Window Placement=2,3, -1,-1, -9,-38, 224,224,1847,817
+Font=Height=-23,FStyle=0,Color=#0000FF,Name=Arial
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
 Select Box Color=#000080
@@ -791,7 +999,7 @@ AutoTitle=Yes
 Grid Color=#808080
 Grid Weight=1
 Grid Pattern=Dot6
-Tracker Foreground=Height=-15,FStyle=0,Color=#000000,Name=Arial
+Tracker Foreground=Height=-23,FStyle=0,Color=#000000,Name=Arial
 Tracker Background=#FFFF00
 Baseline color=#0000FF
 Static Grids=False
@@ -822,17 +1030,17 @@ Number of Grids X=5
 Number of Grids Y=5
 Cursor Select Color Primary=#C0C0C0
 Cursor Select Color Secondary=#FF0000
-Data Point Labels Color Fore=Height=-15,FStyle=0,Color=#000000,Name=Arial
+Data Point Labels Color Fore=Height=-23,FStyle=0,Color=#000000,Name=Arial
 Data Point Labels Color Back=#FFFF00
 PrinterAutoTile=No
 PrinterBlackBorder=No
 MonMaxShow=3
-MonPageWidth=66
-MonPlotWidth=21
-MonExprXWidth=142
-MonExprYWidth=260
-MonRangeXWidth=90
-MonRangeYWidth=90
+MonPageWidth=81
+MonPlotWidth=25
+MonExprXWidth=159
+MonExprYWidth=289
+MonRangeXWidth=111
+MonRangeYWidth=111
 AnimateWait=0
 AnimateWaitTime=500
 Save_For_Future=No
@@ -853,7 +1061,7 @@ Num Out Write Values=True
 Num Out Write Waveform Header=True
 Num Out Low="DCMIN"
 Num Out High="DCMAX"
-Num Out Font=Height=-15,FStyle=0,Color=#000000,Name=Courier New
+Num Out Font=Height=-23,FStyle=0,Color=#000000,Name=Courier New
 
 [Tools]
 Pos=Top
@@ -914,14 +1122,10 @@ ENXSCALE=Yes
 ENYSCALE=Yes
 ZOOMIN=Yes
 ZOOMOUT=Yes
-AUTOSCALE=Yes
+AUTOSCALE=No
 COLOR=Yes
 FONT=Yes
 SELNEXT=No
-
-[APage]
-Analysis=DC
-Name="Main"
 
 [Monte Carlo Options]
 Analysis=Transient
@@ -985,7 +1189,7 @@ Analysis=Transient
 Plt=2
 AliasID=2
 XExp=T
-YExp=v(3)
+YExp=v(out)
 XRng=AutoAlways
 YRng=AutoAlways
 Options=LINEARX,LINEARY
@@ -1021,7 +1225,7 @@ SFmtY=3
 
 [Limits]
 Analysis=AC
-FRange=1E8,1Meg
+FRange=1E8,1
 NPts=51
 Temp=27
 MaxChng=5
@@ -1038,9 +1242,9 @@ Analysis=AC
 Plt=1
 AliasID=1
 XExp=F
-YExp=db(v(1))
-XRng=Auto
-YRng=Auto
+YExp=db(v(6))
+XRng=AutoAlways
+YRng=AutoAlways
 Options=LINEARY
 Line Color=#0000FF
 Text Color=#0000FF
@@ -1059,9 +1263,9 @@ Analysis=AC
 Plt=2
 AliasID=2
 XExp=F
-YExp=ph(v(1))
-XRng=Auto
-YRng=Auto
+YExp=ph(v(6))
+XRng=AutoAlways
+YRng=AutoAlways
 Options=LINEARY
 Line Color=#FF0000
 Text Color=#FF0000
@@ -1078,6 +1282,8 @@ SFmtY=3
 [WaveForm]
 Analysis=AC
 AliasID=-1
+XRng=AutoAlways
+YRng=AutoAlways
 Options=LINEARY
 Line Color=#008000
 Text Color=#008000
@@ -1094,7 +1300,6 @@ SFmtY=3
 [Limits]
 Analysis=DC
 I1Range=10,0,.5
-I1=V1
 NPts=51
 Temp=27
 MaxChng=5
@@ -1109,7 +1314,7 @@ Sweep2 type=None
 Analysis=DC
 Plt=1
 AliasID=1
-XExp=V(2)
+XExp=v(2)
 YExp=v(3)
 XRng=AutoAlways
 YRng=AutoAlways
@@ -1178,10 +1383,10 @@ CurrentPage 0="Main"
 
 [Pane]
 Analysis=AC
+CurrentPage 0="Main"
 
 [Pane]
 Analysis=DC
-CurrentPage 0="Main"
 
 [Pane]
 Analysis=Distortion
@@ -1190,8 +1395,6 @@ Analysis=Distortion
 Analysis=Transient
 Format=3
 ExprPercentWidth=80
-ShowWin=True
-Window Placement=0,1, -1,-1, -1,-1, 0,669,835,893
 
 [Watch]
 Analysis=AC
