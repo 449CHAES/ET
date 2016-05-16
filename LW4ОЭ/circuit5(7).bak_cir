@@ -2,9 +2,9 @@
 FileType=CIR
 Version=9.00
 Program=Micro-Cap
-Screen=1920,1080
-MCAPVersion=9.0.3.0
-Key ID=2 233 293 684
+Screen=1680,1050
+MCAPVersion=9.0.7.0
+Key ID=1 423 547 585
 NLCnt=33
 TXCnt=0
 
@@ -111,7 +111,7 @@ Pin="Emitter",3,3,5,1
 Name=Resistor
 Definition=Resistor
 Shape=Resistor
-Mask=7937
+Mask=7425
 memo=Resistor
 Label Offset=18,6,8,11
 PinCnt=2
@@ -122,7 +122,7 @@ Pin="Minus",0,0,-14,-4
 Name=Sine Source
 Definition=Sine source
 Shape=Sine_Source
-Mask=4865
+Mask=5121
 memo=Sine Source
 Label Offset=18,12,15,12
 PinCnt=2
@@ -154,7 +154,7 @@ Pin="PinA",0,0,-3,-7
 Name=Capacitor
 Definition=Capacitor
 Shape=Capacitor
-Mask=7425
+Mask=6145
 memo=Capacitor
 Label Offset=16,12,12,12
 PinCnt=2
@@ -162,7 +162,7 @@ Pin="Plus",6,0,-3,-5
 Pin="Minus",0,0,-14,-5
 
 [Circuit]
-Window Placement=2,3, -1,-1, -9,-38, 128,128,1458,721
+Window Placement=2,3, -1,-1, -4,-23, 154,154,1343,765
 Default Object=Color=#000080
 Default Object Font=Height=-15,FStyle=0,Color=#000080,Name=Arial
 Default Object Apply Border To Text=No
@@ -238,8 +238,11 @@ ONV=-33,-21,PART,R1
 Style=8192
 
 [Attr]
-ONV=-33,-40,RESISTANCE,20
+ONV=-33,-40,RESISTANCE,25k
 Style=8192
+
+[Attr]
+ONV=0,0,PACKAGE,
 
 [Comp]
 Name=Resistor
@@ -251,8 +254,11 @@ ONV=8,-25,PART,R2
 Style=8192
 
 [Attr]
-ONV=8,-39,RESISTANCE,5k
+ONV=8,-39,RESISTANCE,5000
 Style=8192
+
+[Attr]
+ONV=0,0,PACKAGE,
 
 [Comp]
 Name=Sine Source
@@ -265,6 +271,9 @@ Style=8192
 
 [Attr]
 ONV=18,-40,MODEL,GENERAL
+
+[Attr]
+ONV=0,0,PACKAGE,
 
 [Wire]
 Grids=53,31,55,31
@@ -288,6 +297,9 @@ Style=8192
 ONV=8,-39,RESISTANCE,25k
 Style=8192
 
+[Attr]
+ONV=0,0,PACKAGE,
+
 [Wire]
 Grids=77,19,77,22
 
@@ -305,6 +317,9 @@ Style=8192
 
 [Attr]
 ONV=-35,-35,VALUE,10
+
+[Attr]
+ONV=0,0,PACKAGE,
 
 [Comp]
 Name=Ground
@@ -344,8 +359,11 @@ ONV=8,-25,PART,R5
 Style=8192
 
 [Attr]
-ONV=0,0,RESISTANCE,146
+ONV=0,0,RESISTANCE,
 Style=8192
+
+[Attr]
+ONV=0,0,PACKAGE,
 
 [Comp]
 Name=Capacitor
@@ -358,6 +376,9 @@ Style=8192
 [Attr]
 ONV=16,26,CAPACITANCE,10u
 Style=8192
+
+[Attr]
+ONV=0,0,PACKAGE,
 
 [Wire]
 Grids=67,31,69,31
@@ -378,8 +399,11 @@ ONV=8,-25,PART,R6
 Style=8192
 
 [Attr]
-ONV=0,0,RESISTANCE,30
+ONV=0,0,RESISTANCE,
 Style=8192
+
+[Attr]
+ONV=0,0,PACKAGE,
 
 [Wire]
 Grids=69,37,69,42
@@ -397,8 +421,11 @@ ONV=8,-25,PART,R4
 Style=8192
 
 [Attr]
-ONV=8,-39,RESISTANCE,0.5k
+ONV=8,-39,RESISTANCE,1k
 Style=8192
+
+[Attr]
+ONV=0,0,PACKAGE,
 
 [Wire]
 Grids=77,40,77,42
@@ -413,8 +440,11 @@ ONV=14,-26,PART,C2
 Style=8192
 
 [Attr]
-ONV=8,-40,CAPACITANCE,15u
+ONV=8,-40,CAPACITANCE,10u
 Style=8192
+
+[Attr]
+ONV=0,0,PACKAGE,
 
 [Wire]
 Grids=77,34,83,34
@@ -436,7 +466,7 @@ TextQuad=4099
 Scale=0.5
 PrinterScale=1
 GridUser=10
-ShapeGroups="Main","Euro","DeMorgan","Polarity","Electrolytic"
+ShapeGroups="Main","Euro","DeMorgan","Polarity","Electrolytic","GroundArrow"
 CalcRMS=False
 CalcAVG=False
 CalcPeak=False
@@ -512,7 +542,7 @@ FONT=Yes
 
 [Section]
 Index=0
-Name="circuit5(7)"
+Name="circuit5"
 Type=Main
 Enable=True
 CurrentPage 0=0
@@ -535,7 +565,7 @@ Scale 1=1
 Scale 2=1
 SB 3=196,0
 Scale 3=0.5
-Grid=98,46
+Grid=58,19
 
 [Page]
 Index=1

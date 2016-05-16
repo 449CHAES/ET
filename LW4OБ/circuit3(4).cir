@@ -2,9 +2,9 @@
 FileType=CIR
 Version=9.00
 Program=Micro-Cap
-Screen=1680,1050
-MCAPVersion=9.0.7.0
-Key ID=1 423 547 585
+Screen=1920,1080
+MCAPVersion=9.0.3.0
+Key ID=2 233 293 684
 NLCnt=22
 TXCnt=0
 
@@ -91,7 +91,7 @@ PolyLine=14,2
 Name=NPN
 Definition=NPN
 Shape=NPN
-Mask=5377
+Mask=4097
 memo=NPN Transistor
 Label Offset=28,-13,-5,23
 PinCnt=3
@@ -103,7 +103,7 @@ Pin="Emitter",3,3,5,1
 Name=Resistor
 Definition=Resistor
 Shape=Resistor
-Mask=6913
+Mask=7937
 memo=Resistor
 Label Offset=18,6,8,11
 PinCnt=2
@@ -114,7 +114,7 @@ Pin="Minus",0,0,-14,-4
 Name=Battery
 Definition=Battery
 Shape=Battery
-Mask=5889
+Mask=4609
 memo=Battery
 Label Offset=19,7,10,13
 PinCnt=2
@@ -125,7 +125,7 @@ Pin="Minus",0,0,-10,-5
 Name=Ground
 Definition=Ground
 Shape=Ground
-Mask=257
+Mask=1793
 memo=Ground
 Label Offset=0,0,0,0
 PinCnt=1
@@ -135,7 +135,7 @@ Pin="PinA",0,0,-3,-7
 Name=Sine Source
 Definition=Sine source
 Shape=Sine_Source
-Mask=5889
+Mask=4865
 memo=Sine Source
 Label Offset=18,12,15,12
 PinCnt=2
@@ -143,7 +143,7 @@ Pin="Plus",6,0,-6,-6
 Pin="Minus",0,0,-19,-6
 
 [Circuit]
-Window Placement=2,3, -1,-1, -4,-23, 242,242,1291,853
+Window Placement=2,3, -1,-1, -9,-38, 128,128,1458,721
 Default Object=Color=#000080
 Default Object Font=Height=-15,FStyle=0,Color=#000080,Name=Arial
 Default Object Apply Border To Text=No
@@ -175,8 +175,6 @@ Digital F Color=#FFFF00
 Digital 1 Color=#FF0000
 Digital X Color=#C0C0C0
 Digital Z Color=#808080
-Window Placement in Transient Analysis=2,3, -1,-1, -4,-23, 832,0,1667,893
-Window Placement in DC Analysis=0,1, -1,-1, -4,-23, 0,0,835,672
 SpiceType=AMBIGUOUS
 Block Select Color=#51F998
 TitleBlock Field_1=$name
@@ -224,9 +222,6 @@ Style=8192
 ONV=18,20,RESISTANCE,15
 Style=8192
 
-[Attr]
-ONV=0,0,PACKAGE,
-
 [Comp]
 Name=Resistor
 Grid=71,35
@@ -240,9 +235,6 @@ Style=8192
 ONV=8,25,RESISTANCE,7k
 Style=8192
 
-[Attr]
-ONV=0,0,PACKAGE,
-
 [Comp]
 Name=Battery
 Grid=77,35
@@ -254,9 +246,6 @@ Style=8192
 
 [Attr]
 ONV=-35,-35,VALUE,8
-
-[Attr]
-ONV=0,0,PACKAGE,
 
 [Comp]
 Name=Ground
@@ -275,9 +264,6 @@ Style=8192
 ONV=8,25,RESISTANCE,50k
 Style=8192
 
-[Attr]
-ONV=0,0,PACKAGE,
-
 [Comp]
 Name=Sine Source
 Grid=48,41
@@ -289,9 +275,6 @@ Style=8192
 
 [Attr]
 ONV=-72,26,MODEL,GENERAL
-
-[Attr]
-ONV=0,0,PACKAGE,
 
 [Wire]
 Grids=48,41,50,41
@@ -329,9 +312,6 @@ Style=8192
 ONV=-35,-39,RESISTANCE,0.7k
 Style=8192
 
-[Attr]
-ONV=0,0,PACKAGE,
-
 [Wire]
 Grids=75,47,75,55
 
@@ -356,9 +336,6 @@ Style=8192
 [Attr]
 ONV=-30,27,VALUE,0.8
 
-[Attr]
-ONV=0,0,PACKAGE,
-
 [Wire]
 Grids=60,53,60,55
 
@@ -373,10 +350,10 @@ CurrentSection 3=0
 Splitter.xs=0
 Splitter.ys=0
 TextQuad=4099
-Scale=1
+Scale=0.5
 PrinterScale=1
 GridUser=10
-ShapeGroups="Main","Euro","DeMorgan","Polarity","Electrolytic","GroundArrow"
+ShapeGroups="Main","Euro","DeMorgan","Polarity","Electrolytic"
 CalcRMS=False
 CalcAVG=False
 CalcPeak=False
@@ -473,8 +450,9 @@ Name=Main
 Scale 0=1
 Scale 1=1
 Scale 2=1
-Scale 3=1
-Grid=48,44
+SB 3=98,154
+Scale 3=0.5
+Grid=83,45
 
 [Page]
 Index=1
@@ -527,7 +505,6 @@ Len=489
 .MODEL GENERAL SIN (A=0.02 DC=-0.8 F=1k)
 
 [Transient]
-Window Placement=2,3, -1,-1, -4,-23, 832,0,1667,893
 Font=Height=-15,FStyle=0,Color=#0000FF,Name=Arial
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
@@ -575,13 +552,6 @@ FFT_IncludeDCHarmonic=False
 FFT_AutoScale_Harmonics="10"
 PrinterAutoTile=No
 PrinterBlackBorder=No
-MonMaxShow=3
-MonPageWidth=66
-MonPlotWidth=21
-MonExprXWidth=142
-MonExprYWidth=260
-MonRangeXWidth=90
-MonRangeYWidth=90
 AnimateWait=0
 AnimateWaitTime=500
 Save_For_Future=No
@@ -674,7 +644,6 @@ Analysis=Transient
 Name="Main"
 
 [DC]
-Window Placement=0,1, -1,-1, -4,-23, 835,0,1670,897
 Font=Height=-15,FStyle=0,Color=#0000FF,Name=Arial
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
@@ -719,13 +688,6 @@ Data Point Labels Color Fore=Height=-15,FStyle=0,Color=#000000,Name=Arial
 Data Point Labels Color Back=#FFFF00
 PrinterAutoTile=No
 PrinterBlackBorder=No
-MonMaxShow=3
-MonPageWidth=66
-MonPlotWidth=21
-MonExprXWidth=142
-MonExprYWidth=260
-MonRangeXWidth=90
-MonRangeYWidth=90
 AnimateWait=0
 AnimateWaitTime=500
 Save_For_Future=No
@@ -1004,14 +966,12 @@ Analysis=Transient
 Format=3
 ExprPercentWidth=80
 ShowWin=True
-Window Placement=2,3, -1,-1, -4,-23, 832,0,1667,893
 
 [Watch]
 Analysis=DC
 Format=3
 ExprPercentWidth=80
 ShowWin=True
-Window Placement=0,1, -1,-1, -1,-1, 0,672,835,896
 
 [OPMethods]
 Analysis=Transient

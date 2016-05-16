@@ -2,20 +2,18 @@
 ***                            MC-9 GUAP Edition                             ***
 ***                                                                          ***
 ***                                                                          ***
-***               Частотный анализ AC Analysis of circuit4(5)                ***
+***      Анализ переходных процессов Transient analysis of circuit1(1)       ***
 ********************************************************************************
 Limits
 ======
-Frequency Range  1E8,1
-Number of Points 51
-Temperature      Linear 27
-Maximum Change % 5
-Noise Input      NONE
-Noise Output     2
-Run Options      Normal
-State Variables  Zero
-Frequency Step   Auto
-Operating Point  On
+Time Range           3m
+Maximum Time Step    0
+Number of Points     51
+Temperature          Linear 27
+Run Options          Normal
+State Variables      Zero
+Operating Point      On
+Operating Point Only Off
 
 
 *****************************************************
@@ -26,14 +24,14 @@ Temperature=27
 
 Model parameters for devices of type Sine Source
 ================================================
-Instance:              V2   
+Instance:              V1   
 Using model:      GENERAL   
-A                 20.000m   
-DC               800.000m   
+A                 10.000m   
+DC               820.000m   
 F                  1.000K   
 PH                 0.000 (*)
 RP                 0.000 (*)
-RS                 0.000    
+RS                 1.000m(*)
 TAU                0.000 (*)
 (*) Default Parameter
 
@@ -106,39 +104,39 @@ XTI                3.000 (*)
 DC Operating Point Voltages
 ===========================
 Node         Voltage  Node         Voltage  Node         Voltage 
-1             3.742   2          -790.887m  3          -800.000m 
-4             8.000   5             0.000   6          -800.000m 
+1             2.536   2           819.508m  3           820.000m 
+4            10.000  
 
 
 Operating point for devices of type Bipolar Junction Transistors NPN
 ====================================================================
 Instance:                 Q1
 Using model:          2N706A
-IB                   12.234u
-IC                  608.314u
-VBE                 790.887m
-VBC                  -3.742 
-VCE                   4.533 
-BETADC               49.724 
-GM                   19.068m
-RPI                   3.219K
+IB                   24.601u
+IC                    1.391m
+VBE                 819.508m
+VBC                  -1.716 
+VCE                   2.536 
+BETADC               56.561 
+GM                   43.571m
+RPI                   1.547K
 RX                    0.000 
-RO                  170.539K
-CPI                  17.247p
-CMU                   9.802p
+RO                   73.099K
+CPI                  34.287p
+CMU                  13.775p
 CBX                   0.000 
 CJS                   0.000 
-BETAAC               61.371 
-FT                112.196MEG
+BETAAC               67.385 
+FT                144.284MEG
 
 DC Power Terms:
-PD                    2.767m
+PD                    3.548m
 PS                    0.000 
 
 DC Pin Currents:
-Ib                   12.234u
-Ic                  608.314u
-Ie                 -620.548u
+Ib                   24.601u
+Ic                    1.391m
+Ie                   -1.416m
 Is                    0.000 
 
 Condition:
@@ -148,45 +146,34 @@ State                    LIN
 
 Operating point for devices of type Resistor
 ============================================
-Instance:                  R1              R2              R3              R4
+Instance:                  R1              R2           RS_V1              R3
 DC Power Terms:
-PD                     5.536u          2.590m          0.000         118.634n
+PD                    12.104n         11.143m        605.196f        257.177u
 
 DC Pin Currents:
-Ir                   607.523u       -608.308u          0.000          13.018u
-
-
-
-Operating point for devices of type Capacitor
-=============================================
-Instance:                  C1
-DC Power Terms:
-PS                     0.000 
-
-DC Pin Currents:
-Ic                     0.000 
+Ir                    24.601u          1.493m        -24.601u        101.425u
 
 
 
 Operating point for devices of type Sine Source
 ===============================================
-Instance:                  V2
+Instance:                  V1
 Using model:          GENERAL
 DC Power Terms:
-PG                   486.019u
+PG                    20.173u
 
 DC Pin Currents:
-ISource             -607.523u
+ISource              -24.601u
 
 
 
 Operating point for devices of type SPICE Source
 ================================================
-Instance:                 V1              V3
+Instance:                 V2
 DC Power Terms:
-PG                    4.866m         10.415u
+PG                   14.929m
 
 DC Pin Currents:
-ISource            -608.308u        -13.018u
+ISource              -1.493m
 
 

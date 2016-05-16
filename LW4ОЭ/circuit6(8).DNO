@@ -1,13 +1,13 @@
 ********************************************************************************
-***                            Micro-Cap 9.0.7.0                             ***
-***                                    e                                     ***
-***                                    f                                     ***
-***                        DC Analysis of circuit4(5)                        ***
+***                            MC-9 GUAP Edition                             ***
+***                                                                          ***
+***                                                                          ***
+***          Анализ по постоянному току DC Analysis of circuit6(8)           ***
 ********************************************************************************
 Limits
 ======
 Variable 1 Method Auto
-Variable 1 Name   V2
+Variable 1 Name   V1
 Variable 1 Range  10,0,.5
 Variable 2 Method None
 Variable 2 Name   
@@ -26,14 +26,14 @@ Temperature=27
 
 Model parameters for devices of type Sine Source
 ================================================
-Instance:              V2   
+Instance:              V1   
 Using model:      GENERAL   
-A                 20.000m   
-DC              -800.000m   
+A                 10.000m   
+DC                 0.000 (*)
 F                  1.000K   
 PH                 0.000 (*)
 RP                 0.000 (*)
-RS                 1.000m(*)
+RS                 0.000    
 TAU                0.000 (*)
 (*) Default Parameter
 
@@ -45,7 +45,7 @@ Instance:              Q1
 Using model:       2N706A   
 LEVEL                   1(*)
 AF                 1.000 (*)
-BF               100.000 (*)
+BF                50.000    
 BR                 1.000m   
 CJC               27.483p   
 CJE                2.000p   

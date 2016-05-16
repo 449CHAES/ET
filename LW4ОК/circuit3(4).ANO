@@ -106,7 +106,7 @@ XTI                3.000 (*)
 DC Operating Point Voltages
 ===========================
 Node         Voltage  Node         Voltage  Node         Voltage 
-1             5.868   2             6.381   3             5.510  
+1             1.408   2             1.711   3           883.501m 
 4            10.000   5             6.500   OUT           0.000  
 
 
@@ -114,31 +114,31 @@ Operating point for devices of type Bipolar Junction Transistors NPN
 ====================================================================
 Instance:                 Q1
 Using model:          2N706A
-IB                    4.684m
-IC                  826.220u
-VBE                 871.676m
-VBC                 513.525m
-VCE                 358.151m
-BETADC              176.409m
-GM                  167.285m
-RPI                 253.923 
+IB                   48.668u
+IC                    1.719m
+VBE                 827.616m
+VBC                 302.849m
+VCE                 524.767m
+BETADC               35.320 
+GM                   53.845m
+RPI                 748.267 
 RX                    0.000 
-RO                    3.126K
-CPI                 133.877p
-CMU                  17.986n
+RO                   57.736K
+CPI                  41.781p
+CMU                  43.450p
 CBX                   0.000 
 CJS                   0.000 
-BETAAC               42.477 
-FT                  1.469MEG
+BETAAC               40.290 
+FT                100.546MEG
 
 DC Power Terms:
-PD                    4.378m
+PD                  942.430u
 PS                    0.000 
 
 DC Pin Currents:
-Ib                    4.684m
-Ic                  826.220u
-Ie                   -5.510m
+Ib                   48.668u
+Ic                    1.719m
+Ie                   -1.768m
 Is                    0.000 
 
 Condition:
@@ -150,18 +150,18 @@ Operating point for devices of type Resistor
 ============================================
 Instance:                  R1              R2              R3              R4
 DC Power Terms:
-PD                     3.415m         30.357m        702.872u          0.000 
+PD                    14.764m          1.561m          1.147           0.000 
 
 DC Pin Currents:
-Ir                  -826.418u         -5.510m          5.928m          0.000 
+Ir                    -1.718m         -1.767m        239.444m          0.000 
 
 
 Instance:                  R5              R6
 DC Power Terms:
-PD                    65.470m        123.402m
+PD                     1.561         731.980m
 
 DC Pin Currents:
-Ir                   -18.093m        -19.338m
+Ir                  -188.384m       -427.779m
 
 
 
@@ -181,10 +181,10 @@ Operating point for devices of type Sine Source
 Instance:                  V1
 Using model:          GENERAL
 DC Power Terms:
-PG                    38.533m
+PG                     1.556 
 
 DC Pin Currents:
-ISource               -5.928m
+ISource             -239.444m
 
 
 
@@ -192,9 +192,9 @@ Operating point for devices of type SPICE Source
 ================================================
 Instance:                 V2
 DC Power Terms:
-PG                  189.192m
+PG                    1.901 
 
 DC Pin Currents:
-ISource             -18.919m
+ISource            -190.102m
 
 

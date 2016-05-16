@@ -2,9 +2,9 @@
 FileType=CIR
 Version=9.00
 Program=Micro-Cap
-Screen=1680,1050
-MCAPVersion=9.0.7.0
-Key ID=1 423 547 585
+Screen=1920,1080
+MCAPVersion=9.0.3.0
+Key ID=2 233 293 684
 NLCnt=28
 TXCnt=0
 
@@ -111,7 +111,7 @@ Pin="Emitter",3,3,5,1
 Name=Resistor
 Definition=Resistor
 Shape=Resistor
-Mask=7425
+Mask=7937
 memo=Resistor
 Label Offset=18,6,8,11
 PinCnt=2
@@ -122,7 +122,7 @@ Pin="Minus",0,0,-14,-4
 Name=Sine Source
 Definition=Sine source
 Shape=Sine_Source
-Mask=5121
+Mask=4865
 memo=Sine Source
 Label Offset=18,12,15,12
 PinCnt=2
@@ -154,7 +154,7 @@ Pin="PinA",0,0,-3,-7
 Name=Capacitor
 Definition=Capacitor
 Shape=Capacitor
-Mask=6145
+Mask=7425
 memo=Capacitor
 Label Offset=16,12,12,12
 PinCnt=2
@@ -162,7 +162,7 @@ Pin="Plus",6,0,-3,-5
 Pin="Minus",0,0,-14,-5
 
 [Circuit]
-Window Placement=2,3, -1,-1, -4,-23, 110,110,1299,721
+Window Placement=2,3, -1,-1, -9,-38, 0,0,1330,593
 Default Object=Color=#000080
 Default Object Font=Height=-15,FStyle=0,Color=#000080,Name=Arial
 Default Object Apply Border To Text=No
@@ -238,11 +238,8 @@ ONV=-33,-21,PART,R1
 Style=8192
 
 [Attr]
-ONV=-33,-40,RESISTANCE,25k
+ONV=-33,-40,RESISTANCE,20
 Style=8192
-
-[Attr]
-ONV=0,0,PACKAGE,
 
 [Comp]
 Name=Resistor
@@ -257,9 +254,6 @@ Style=8192
 ONV=8,-39,RESISTANCE,5000
 Style=8192
 
-[Attr]
-ONV=0,0,PACKAGE,
-
 [Comp]
 Name=Sine Source
 Grid=53,38
@@ -271,9 +265,6 @@ Style=8192
 
 [Attr]
 ONV=18,-40,MODEL,GENERAL
-
-[Attr]
-ONV=0,0,PACKAGE,
 
 [Wire]
 Grids=59,38,61,38
@@ -297,9 +288,6 @@ Style=8192
 ONV=8,-39,RESISTANCE,25k
 Style=8192
 
-[Attr]
-ONV=0,0,PACKAGE,
-
 [Wire]
 Grids=83,26,83,29
 
@@ -317,9 +305,6 @@ Style=8192
 
 [Attr]
 ONV=-35,-35,VALUE,10
-
-[Attr]
-ONV=0,0,PACKAGE,
 
 [Comp]
 Name=Ground
@@ -365,9 +350,6 @@ Style=8192
 ONV=0,0,RESISTANCE,
 Style=8192
 
-[Attr]
-ONV=0,0,PACKAGE,
-
 [Comp]
 Name=Capacitor
 Grid=67,38
@@ -379,9 +361,6 @@ Style=8192
 [Attr]
 ONV=16,26,CAPACITANCE,10u
 Style=8192
-
-[Attr]
-ONV=0,0,PACKAGE,
 
 [Wire]
 Grids=73,38,75,38
@@ -405,9 +384,6 @@ Style=8192
 ONV=0,0,RESISTANCE,
 Style=8192
 
-[Attr]
-ONV=0,0,PACKAGE,
-
 [Wire]
 Grids=75,44,75,49
 
@@ -425,7 +401,7 @@ TextQuad=4099
 Scale=0.6666666666666666
 PrinterScale=1
 GridUser=10
-ShapeGroups="Main","Euro","DeMorgan","Polarity","Electrolytic","GroundArrow"
+ShapeGroups="Main","Euro","DeMorgan","Polarity","Electrolytic"
 CalcRMS=False
 CalcAVG=False
 CalcPeak=False
@@ -501,7 +477,7 @@ FONT=Yes
 
 [Section]
 Index=0
-Name="circuit3"
+Name="circuit3(5)"
 Type=Main
 Enable=True
 CurrentPage 0=0
@@ -522,9 +498,9 @@ Name=Main
 Scale 0=1
 Scale 1=1
 Scale 2=1
-SB 3=179,0
+SB 3=383,0
 Scale 3=0.6666666666666666
-Grid=83,49
+Grid=93,26
 
 [Page]
 Index=1
