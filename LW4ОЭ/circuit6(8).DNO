@@ -29,7 +29,7 @@ Model parameters for devices of type Sine Source
 Instance:              V1   
 Using model:      GENERAL   
 A                 10.000m   
-DC                 0.000 (*)
+DC                 6.200    
 F                  1.000K   
 PH                 0.000 (*)
 RP                 0.000 (*)

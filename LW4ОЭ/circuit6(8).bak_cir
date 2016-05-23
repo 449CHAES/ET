@@ -195,7 +195,7 @@ Digital 1 Color=#FF0000
 Digital X Color=#C0C0C0
 Digital Z Color=#808080
 Window Placement in Transient Analysis=0,1, -1,-1, -9,-38, 0,0,933,657
-Window Placement in AC Analysis=0,1, -1,-1, -9,-38, 0,0,933,839
+Window Placement in AC Analysis=0,1, -1,-1, -9,-38, 0,0,933,877
 Window Placement in DC Analysis=0,1, -1,-1, -9,-38, 0,0,933,839
 SpiceType=AMBIGUOUS
 Block Select Color=#51F998
@@ -344,7 +344,7 @@ ONV=8,-25,PART,R5
 Style=8192
 
 [Attr]
-ONV=3,-7,RESISTANCE,44
+ONV=3,-7,RESISTANCE,15k
 Style=8192
 
 [Wire]
@@ -363,7 +363,7 @@ ONV=8,-25,PART,R6
 Style=8192
 
 [Attr]
-ONV=7,-6,RESISTANCE,6.6
+ONV=7,-6,RESISTANCE,6k
 Style=8192
 
 [Wire]
@@ -382,7 +382,7 @@ ONV=8,-25,PART,R4
 Style=8192
 
 [Attr]
-ONV=8,-39,RESISTANCE,0.5k
+ONV=8,-39,RESISTANCE,3k
 Style=8192
 
 [Wire]
@@ -398,7 +398,7 @@ ONV=14,-26,PART,C2
 Style=8192
 
 [Attr]
-ONV=8,-40,CAPACITANCE,7.9u
+ONV=8,-40,CAPACITANCE,10u
 Style=8192
 
 [Wire]
@@ -419,7 +419,7 @@ ONV=16,12,PART,C3
 Style=8192
 
 [Attr]
-ONV=0,0,CAPACITANCE,0.1u
+ONV=1,6,CAPACITANCE,5u
 Style=8192
 
 [Wire]
@@ -550,7 +550,7 @@ Scale 0=1
 Scale 1=1
 Scale 2=1
 Scale 3=0.6666666666666666
-Grid=62,28
+Grid=26,14
 
 [Page]
 Index=1
@@ -751,7 +751,7 @@ Analysis=Transient
 Name="Main"
 
 [AC]
-Window Placement=0,1, -1,-1, -9,-38, 0,0,929,859
+Window Placement=0,1, -1,-1, -9,-38, 928,0,1907,877
 Font=Height=-23,FStyle=0,Color=#0000FF,Name=Arial
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
@@ -899,7 +899,7 @@ Analysis=AC
 Name="Main"
 
 [DC]
-Window Placement=0,1, -1,-1, -9,-38, 0,0,929,835
+Window Placement=0,1, -1,-1, -9,-38, 966,0,1895,835
 Font=Height=-23,FStyle=0,Color=#0000FF,Name=Arial
 WinBackGround Color=#FFFFFF
 Select Color=#FF0000
@@ -1156,7 +1156,7 @@ Analysis=AC
 Plt=1
 AliasID=1
 XExp=F
-YExp=db(v(6))
+YExp=db(v(7))
 XRng=AutoAlways
 YRng=AutoAlways
 Options=LINEARY
@@ -1177,7 +1177,7 @@ Analysis=AC
 Plt=2
 AliasID=2
 XExp=F
-YExp=ph(v(6))
+YExp=ph(v(7))
 XRng=AutoAlways
 YRng=AutoAlways
 Options=LINEARY
